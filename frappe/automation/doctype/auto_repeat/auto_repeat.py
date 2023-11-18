@@ -263,7 +263,7 @@ class AutoRepeat(Document):
 
 			new_doc.set("from_date", from_date)
 			new_doc.set("to_date", to_date)
-
+	@frappe.whitelist()
 	def get_next_schedule_date(self, schedule_date, for_full_schedule=False):
 		"""
 		Returns the next schedule date for auto repeat after a recurring document has been created.
